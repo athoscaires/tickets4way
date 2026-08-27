@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Tickets 4-Way</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/logos/favicon.svg" rel="icon">
+
+  <!-- Fonts -->
+  <link href="assets/fonts/DMSans-Bold.ttf" rel="stylesheet">
+  <link href="assets/fonts/DMSans-Medium.ttf" rel="stylesheet">
+  <link href="assets/fonts/DMSans-Regular.ttf" rel="stylesheet">
+
+  <!-- Bootstrap CSS Files -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Ticket4Way CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container nav-container navbar-expand-sm d-flex align-items-center justify-content-end">
+      <div class="language">
+        <button class="language-btn"><img src="/assets/img/logos/pt-br.svg" alt="português" class="language-img active"></button>
+        <button class="language-btn"><img src="/assets/img/logos/us.svg" alt="inglês" class="language-img"></button>
+        <button class="language-btn"><img src="/assets/img/logos/es.svg" alt="espanhol" class="language-img"></button>
+      </div>
+    </div>
+
+    <!-- ======= Navbar ======= -->
+    <div class="container nav-container navbar-expand-sm d-flex align-items-center">
+      <a href="index.html" class="header-logo me-auto"><img src="assets/img/logos/logo.svg" alt="Logo Ticket 4-Way"></a>
+      <i class="bi bi-list mobile-nav-toggle order-2"></i>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="index.html#hero">Inicio</a></li>
+          <li><a class="nav-link scrollto" href="about-us.html">Sobre nós</a></li>
+          <li><a class="nav-link scrollto" href="index.html#events">Eventos</a></li>
+          <li><a class="nav-link scrollto" href="your-event-here.html">Seu evento aqui</a></li>
+          <li><a class="nav-link scrollto" href="index.html#contact">Contato</a></li>
+        </ul> 
+      </nav>
+      <div class="log-btn">
+        <button type="button" class="enter-btn order-1 active" id="enter-btn" data-bs-toggle="modal" data-bs-target="#login-modal">
+          Entre
+        </button>
+      </div>
+      <div class="log-btn">
+        <div class="navbtn-user order-1" id="navbtn-user">
+          <div class="user-accordion position-fixed" id="user-accordion">
+            <div class="user-accordion-item">
+              <h2 class="user-accordion-header">
+                <button class="user-accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-user" aria-expanded="true" aria-controls="collapse-user">
+                  Olá, usuário
+                </button>
+              </h2>
+              <div id="collapse-user" class="accordion-collapse collapse">
+                <div class="user-accordion-body">
+                  <a class="user-accordion-link" href="my-tickets.html"><img src="./assets/img/icons/ticket.svg" alt="Ticket">Meus ingressos</a>
+                  <a class="user-accordion-link" href="my-account.html"><img src="./assets/img/icons/user.svg" alt="User">Minha conta</a>
+                  <a class="user-accordion-link" href="index.html" id="logout-link"><img src="./assets/img/icons/logout.svg" alt="Logout">Sair</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- End Navbar -->
+  </header><!-- End Header -->
+
+  <!-- ======= Modal ======= -->
+  <div class="login-modal modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="login-modal-label" aria-hidden="true" data-backdrop="false">
+    <div class="modal-dialog modal-dialog-centered d-flex justify-content-center">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 d-flex justify-content-center align-items-center">
+                <img src="./assets/img/logos/logo-white.svg" alt="">
+              </div>
+              <div class="col-12 col-12 d-flex justify-content-center align-items-center">
+                <div class="user-login">
+                  <form id="login-form">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-12 d-flex justify-content-center align-items-center">
+                          <div class="form-group">
+                            <span>E-mail</span>
+                            <input type="email" name="username" autocomplete="username" class="form-control" id="input-email" placeholder="Insira seu e-mail">
+                          </div>
+                        </div>
+                        <div class="col-12 d-flex justify-content-center align-items-center">
+                          <div class="form-group">
+                            <span>Senha</span>
+                            <input type="password" name="senha" autocomplete="current-password" class="form-control password" id="input-password" placeholder="Insira sua senha">
+                            <button type="button" class="btn toggle-password">
+                              <i class="bi bi-eye-slash"></i>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="form-check">
+                            <div class="row">
+                              <div class="col-6">
+                                <label class="switch">
+                                  <input type="checkbox">
+                                  <span class="slider round"></span>
+                                  <h3>Lembrar-me?</h3>
+                                </label>
+                              </div>
+                              <div class="col-6">
+                                <div class="forgot-password">
+                                  <a href="#">Esqueceu a senha?</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <button type="submit" class="user-login-btn">Entrar</button>
+                        </div>
+                        <div class="col-12 d-flex justify-content-center align-items-center">
+                          <div class="login-register">
+                            <span>Não tem uma conta ainda? Registre-se</span>
+                            <a data-bs-target="#register-modal" data-bs-toggle="modal">aqui</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="register-modal modal fade" id="register-modal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered d-flex justify-content-center">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="container-register d-flex justify-content-center">
+            <div class="row">
+              <div class="col-12 col-md-4 p-0 d-flex justify-content-center justify-content-md-end">
+                <div class="register-image">
+                  <img src="./assets/img/logos/logo-blue.svg" alt="">
+                </div>
+              </div>
+              <div class="col-12 col-md-8 p-0 d-flex justify-content-center justify-content-md-start">
+                <form class="register-form">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-12 d-flex justify-content-center justify-content-md-end">
+                        <div class="form-group">
+                          <span>Nome</span>
+                          <input type="text" class="form-control" placeholder="Insira seu nome completo">
+                        </div>
+                      </div>
+                      <div class="col-12 d-flex justify-content-center justify-content-md-end">
+                        <div class="form-group">
+                          <span>Celular</span>
+                          <input type="number" class="form-control" placeholder="Insira seu celular com código de área e DDD">
+                        </div>
+                      </div>
+                      <div class="col-12 d-flex justify-content-center justify-content-md-end">
+                        <div class="form-group">
+                          <span>Cidade</span>
+                          <input type="text" class="form-control" placeholder="Insira sua cidade">
+                        </div>
+                      </div>
+                      <div class="col-12 d-flex justify-content-center justify-content-md-end">
+                        <div class="form-group">
+                          <span>Estado</span>
+                          <input type="text" class="form-control" placeholder="Insira seu estado">
+                        </div>
+                      </div>
+                      <div class="col-12 d-flex justify-content-center justify-content-md-end">
+                        <div class="form-group">
+                          <span>E-mail</span>
+                          <input type="email" name="username" autocomplete="username" class="form-control" placeholder="Insira seu e-mail">
+                        </div>
+                      </div>
+                      <div class="col-12 d-flex justify-content-center justify-content-md-end">
+                        <div class="form-group">
+                          <span>Repita o e-mail</span>
+                          <input type="email" name="username" autocomplete="username" class="form-control" placeholder="Repita seu e-mail">
+                        </div>
+                      </div>
+                      <div class="col-12 d-flex justify-content-center justify-content-md-end">
+                        <div class="form-group">
+                          <span>Senha</span>
+                          <input type="password" name="senha" autocomplete="current-password" class="form-control password" id="register-password" placeholder="Insira sua senha">
+                          <button type="button" class="btn toggle-password btn-a">
+                            <i class="bi bi-eye-slash"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="col-12 d-flex justify-content-center justify-content-md-end">
+                        <div class="form-group">
+                          <span>Repita a senha</span>
+                          <input type="password" name="senha" autocomplete="current-password" class="form-control password" id="repeat-password" placeholder="Repita sua senha">
+                          <button type="button" class="btn toggle-password btn-b">
+                            <i class="bi bi-eye-slash"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="col-12 d-flex justify-content-center justify-content-md-end">
+                        <div class="register-check">
+                          <input type="checkbox" class="form-check-input" id="check">
+                          <label class="register-check-label">
+                            Autorizo o recebimento de informações e ofertas da Tickets4Way e seus parceiros.
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-12 d-flex justify-content-center">
+                        <div class="register-content">
+                          <button class="register-btn">Registre-se</button>
+                        </div>
+                      </div>
+                      <div class="col-12 d-flex justify-content-center">
+                        <div class="register-text">
+                          <p>
+                            Cadastre seu login e senha de acesso rápido. Assim você pode efetuar suas compras através do site Tickets4Way.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- End Modal -->
+
+  <!-- ======= Seat Map Modal ======= -->
+  <div class="seatmap-modal modal fade" id="seatmap-modal" tabindex="-1" role="dialog" aria-labelledby="seatmap-modal-label" aria-hidden="true" data-backdrop="false">
+    <div class="modal-dialog modal-dialog-centered modal-xl d-flex justify-content-center">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="title">
+                        <span class="text">
+                          <img src="./assets/img/icons/seat.svg" alt="ícone assentos"> Selecione seu assento, setor Prime
+                        </span>
+                      </div>
+                    </div>
+                    <div class="col-6 d-flex justify-content-end align-items-center">
+                      <button type="button" class="seatmodal-close" data-bs-dismiss="modal" aria-label="Close"><img src="./assets/img/icons/close-blue.svg" alt=""></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 d-flex justify-content-center align-items-center">
+                <span class="screen"></span>
+              </div>
+              <div class="col-12 d-flex justify-content-center align-items-center px-0">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-6 pe-4 pe-xl-5">
+                      <div class="container-fluid">
+                        <div class="row pe-xl-5">
+                          <div class="col-12 d-flex justify-content-end align-items-center px-0">
+                            <span class="seat-line-left">A</span>
+                            <span class="seat">1</span>
+                            <span class="seat">2</span>
+                            <span class="seat">3</span>
+                            <span class="seat">4</span>
+                            <span class="seat">5</span>
+                            <span class="seat">6</span>
+                            <span class="seat">7</span>
+                            <span class="seat">8</span>
+                            <span class="seat">9</span>
+                            <span class="seat">10</span>
+                            <span class="seat">11</span>
+                            <span class="seat">12</span>
+                            <span class="seat">13</span>
+                            <span class="seat">14</span>
+                            <span class="seat">15</span>
+                          </div>
+                          <div class="col-12 d-flex justify-content-end align-items-center px-0">
+                            <span class="seat-line-left">B</span>
+                            <span class="seat">31</span>
+                            <span class="seat">32</span>
+                            <span class="seat">33</span>
+                            <span class="seat">34</span>
+                            <span class="seat">35</span>
+                            <span class="seat">36</span>
+                            <span class="seat reserved">37</span>
+                            <span class="seat reserved">38</span>
+                            <span class="seat reserved">39</span>
+                            <span class="seat reserved">40</span>
+                            <span class="seat">41</span>
+                            <span class="seat">42</span>
+                            <span class="seat">43</span>
+                            <span class="seat">44</span>
+                            <span class="seat">45</span>
+                          </div>
+                          <div class="col-12 d-flex justify-content-end align-items-center px-0">
+                            <span class="seat-line-left">C</span>
+                            <span class="seat">61</span>
+                            <span class="seat">62</span>
+                            <span class="seat">63</span>
+                            <span class="seat">64</span>
+                            <span class="seat">65</span>
+                            <span class="seat reserved">66</span>
+                            <span class="seat">67</span>
+                            <span class="seat">68</span>
+                            <span class="seat">69</span>
+                            <span class="seat">70</span>
+                            <span class="seat">71</span>
+                            <span class="seat">72</span>
+                            <span class="seat">73</span>
+                            <span class="seat">74</span>
+                            <span class="seat">75</span>
+                          </div>
+                          <div class="col-12 d-flex justify-content-end align-items-center px-0">
+                            <span class="seat-line-left">D</span>
+                            <span class="seat">91</span>
+                            <span class="seat">92</span>
+                            <span class="seat">93</span>
+                            <span class="seat">94</span>
+                            <span class="seat">95</span>
+                            <span class="seat">96</span>
+                            <span class="seat">97</span>
+                            <span class="seat">98</span>
+                            <span class="seat">99</span>
+                            <span class="seat">100</span>
+                            <span class="seat">101</span>
+                            <span class="seat">102</span>
+                            <span class="seat">103</span>
+                            <span class="seat reserved">104</span>
+                            <span class="seat reserved">105</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 ps-4 ps-xl-5">
+                      <div class="container-fluid">
+                        <div class="row ps-xl-5">
+                          <div class="col-12 d-flex justify-content-start align-items-center px-0">
+                            <span class="seat">16</span>
+                            <span class="seat">17</span>
+                            <span class="seat">18</span>
+                            <span class="seat">19</span>
+                            <span class="seat">20</span>
+                            <span class="seat reserved">21</span>
+                            <span class="seat reserved">22</span>
+                            <span class="seat">23</span>
+                            <span class="seat">24</span>
+                            <span class="seat">25</span>
+                            <span class="seat">26</span>
+                            <span class="seat">27</span>
+                            <span class="seat">28</span>
+                            <span class="seat">29</span>
+                            <span class="seat">30</span>
+                            <span class="seat-line-right">A</span>
+                          </div>
+                          <div class="col-12 d-flex justify-content-start align-items-center px-0">
+                            <span class="seat">46</span>
+                            <span class="seat">47</span>
+                            <span class="seat">48</span>
+                            <span class="seat">49</span>
+                            <span class="seat">50</span>
+                            <span class="seat">51</span>
+                            <span class="seat">52</span>
+                            <span class="seat">53</span>
+                            <span class="seat">54</span>
+                            <span class="seat">55</span>
+                            <span class="seat">56</span>
+                            <span class="seat reserved">57</span>
+                            <span class="seat reserved">58</span>
+                            <span class="seat reserved">59</span>
+                            <span class="seat">60</span>
+                            <span class="seat-line-right">B</span>
+                          </div>
+                          <div class="col-12 d-flex justify-content-start align-items-center px-0">
+                            <span class="seat">76</span>
+                            <span class="seat">77</span>
+                            <span class="seat">78</span>
+                            <span class="seat">79</span>
+                            <span class="seat">80</span>
+                            <span class="seat">81</span>
+                            <span class="seat">82</span>
+                            <span class="seat">83</span>
+                            <span class="seat">84</span>
+                            <span class="seat">85</span>
+                            <span class="seat">86</span>
+                            <span class="seat">87</span>
+                            <span class="seat">88</span>
+                            <span class="seat">89</span>
+                            <span class="seat">90</span>
+                            <span class="seat-line-right">C</span>
+                          </div>
+                          <div class="col-12 d-flex justify-content-start align-items-center px-0">
+                            <span class="seat">106</span>
+                            <span class="seat">107</span>
+                            <span class="seat">108</span>
+                            <span class="seat">109</span>
+                            <span class="seat">110</span>
+                            <span class="seat">111</span>
+                            <span class="seat">112</span>
+                            <span class="seat">113</span>
+                            <span class="seat">114</span>
+                            <span class="seat">115</span>
+                            <span class="seat">116</span>
+                            <span class="seat">117</span>
+                            <span class="seat">118</span>
+                            <span class="seat">119</span>
+                            <span class="seat">120</span>
+                            <span class="seat-line-right">D</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 d-flex justify-content-center align-items-center">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-5 d-flex justify-content-start align-items-end px-0">
+                      <span class="empty-seat"></span><h2>Vazio</h2>
+                      <span class="reserved-seat"></span><h2>Reservado</h2>
+                      <span class="selected-seat"></span><h2>Selecionado</h2>
+                      <span class="your-seat"></span><h2>Seu assento</h2>
+                    </div>
+                    <div class="col-7 d-flex justify-content-start align-items-end">
+                      <input type="submit" class="finish-btn" value="Concluir">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- Seat Map Modal -->
+  
+  <!-- ======= Event Hero ======= -->
+  <section id="event-hero">
+    <div class="event">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-7 d-flex justify-content-center justify-content-lg-end justify-content-xxl-center mb-3 mb-lg-0 px-0">
+            <div class="event-picture event_banner">
+              <img id="event_banner" src="assets/img/cards/PADRE FABIO DE MELO ORLANDO.png" alt="">
+            </div>
+          </div>
+          <div class="col-12 col-lg-5 d-flex justify-content-center justify-content-lg-start px-0 mt-5 mt-lg-0">
+            <div class="event-info">
+              <div class="event-title">
+                <h1 class="event_title">PADRE FÁBIO DE MELO ORLANDO</h1>
+              </div>
+              <div class="event-content">
+                <div class="event-date d-flex align-items-center">
+                  <img src="assets/img/icons/calendar.svg" alt="">
+                  <p class="event_day">19</p>
+                  <p class="event_month">DE OUTUBRO</p>
+                </div>
+                <div class="event-location d-flex align-items-center">
+                  <img src="assets/img/icons/pin.svg" alt="">
+                  <div class="container">
+                    <h1 class="event_location">MAJESTIC LIFE</h1>
+                    <p class="event_address">821 S Kirkman Rd, Orlando/FL 32811</p>
+                  </div>
+                </div>
+                <div class="event-time d-flex align-items-center">
+                  <img src="assets/img/icons/clock.svg" alt="">
+                  <div class="container">
+                    <p class="event_start">Inicio: 8:30pm</p>
+                    <p class="event_open">Abertura dos portões: 7:30pm</p>
+                  </div>
+                </div>
+                <span class="event_complement">*Horário local Orlando/FL(EUA)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Event Hero -->
+
+  <main id="main">
+    <section id="description" class="description my-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 d-flex justify-content-center justify-content-xxl-start">
+            <div class="container">
+              <div class="row">
+                <div class="col-12 order-2 order-xxl-1 col-xxl-7 d-flex justify-content-center justify-content-xxl-start">
+                  <div class="description-text">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-12">
+                          <h1>Descrição</h1>
+                        </div>
+                        <div class="col-12">
+                          <p>
+                            Padre Fábio de Melo está de volta aos Estados Unidos! Logo no primeiro mês do ano, 
+                            a turnê "Este Sou Eu" chega a América para iniciarmos 2023 com muita fé, esperança, 
+                            louvor e adoração. Um show onde a palavra de Deus se mistura à canção, Padre Fábio de Melo 
+                            reúne clássicos e composições autorais que se tornaram sucessos ao longo de 25 anos de carreira musical.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 order-3 col-xxl-7 d-flex justify-content-center justify-content-xxl-start">
+                  <div class="mapdescription-text">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-12">
+                          <h1>Informações gerais</h1>
+                        </div>
+                        <div class="col-12">
+                          <p>
+                            <strong>Setores:</strong>
+                          </p>
+                          <p>
+                            Prime (com lugar marcado)
+                            <br>
+                            Setor A, B e C (por ordem de chegada)
+                            <br>
+                            <br>
+                            Drink para maiores de 21 anos
+                          </p>
+                          <p>
+                            <strong>INGRESSOS NÃO SERÃO DEVOLVIDOS NEM REEMBOLSADOS</strong>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 order-1 order-xxl-2 col-xxl-5 d-flex justify-content-center d-xxl-block px-0">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-12 d-flex justify-content-center">
+                        <div class="tickets" id="tickets">
+                          <div class="container-fluid">
+                            <div class="row">
+                              <div class="col-12 d-flex justify-content-center">
+                                <h1>INGRESSO</h1>
+                              </div>
+                              <div class="col-12 d-flex justify-content-center">
+                                <div class="tickets-table">
+                                  <div class="container">
+                                    <div class="row">
+                                      <div class="col-12 d-flex justify-content-center">
+                                        <div class="table-responsive">
+                                          <table class="table table-borderless">
+                                            <thead>
+                                              <th><h2>TIPO</h2></th>
+                                              <th class="th-table"><h2>LOTE</h2></th>
+                                              <th class="th-table"><h2>VALOR</h2></th>
+                                              <th><h2>QUANTIDADE</h2></th>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <td><span><strong>Prime</strong> <span style="font-size:1rem">(assento marcado)</span></span></td>
+                                                <td class="th-table"><p>1°</p></td>
+                                                <td class="th-table"><p>$ 0,00 + 0,00 tax</p></td>
+                                                <td>
+                                                  <div class="spinner-container">
+                                                    <button class="spinner-decrement">–</button>
+                                                    <input type="number" class="spinner-number" value="0" readonly>
+                                                    <button class="spinner-increment">+</button>
+                                                  </div>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td><span><strong>Setor A</strong></span></td>
+                                                <td class="th-table"><p>1°</p></td>
+                                                <td class="th-table"><p>$ 0,00 + 0,00 tax</p></td>
+                                                <td>
+                                                  <div class="spinner-container">
+                                                    <button class="spinner-decrement">–</button>
+                                                    <input type="number" class="spinner-number" value="0" readonly>
+                                                    <button class="spinner-increment">+</button>
+                                                  </div>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td><span><strong>Setor B</strong></span></td>
+                                                <td class="th-table"><p>1°</p></td>
+                                                <td class="th-table"><p>$ 0,00 + 0,00 tax</p></td>
+                                                <td>
+                                                  <div class="spinner-container">
+                                                    <button class="spinner-decrement">–</button>
+                                                    <input type="number" class="spinner-number" value="0" readonly>
+                                                    <button class="spinner-increment">+</button>
+                                                  </div>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td><span><strong>Setor C</strong></span></td>
+                                                <td class="th-table"><p>1°</p></td>
+                                                <td class="th-table"><p>$ 0,00 + 0,00 tax</p></td>
+                                                <td>
+                                                  <div class="spinner-container">
+                                                    <button class="spinner-decrement">–</button>
+                                                    <input type="number" class="spinner-number" value="0" readonly>
+                                                    <button class="spinner-increment">+</button>
+                                                  </div>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </div>
+                                      </div>
+                                      <div class="col-12 d-flex justify-content-center">
+                                        <input type="submit" data-bs-toggle="modal" data-bs-target="#ticket-modal" value="Comprar">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 d-flex justify-content-center aligne-items-center">
+                        <div class="map" id="map">
+                          <div class="accordion" id="map-accordion">
+                            <div class="accordion-item">
+                              <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-map" aria-expanded="true" aria-controls="collapse-map">
+                                  MAPA DE ASSENTOS
+                                </button>
+                              </h2>
+                              <div class="accordion-collapse collapse" id="collapse-map">
+                                <div class="accordion-body">
+                                  <img src="./assets/img/cards/map.svg" alt="mapa de assentos">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 d-flex justify-content-center justify-content-xxl-start">
+            <div class="information-text">
+              <div class="container">
+                <div class="row">
+                  <div class="col-12">
+                    <h1>Realese</h1>
+                  </div>
+                  <div class="col-12">
+                    <p>
+                      Fábio José de Melo Silva, mais conhecido como Padre Fábio de Melo (Formiga, 3 de abril de 1971), 
+                      é um sacerdote católico, artista, escritor, professor universitário e apresentador brasileiro. 
+                      Pertenceu à Congregação dos Sacerdotes do Sagrado Coração de Jesus. Atua na Diocese de Taubaté, 
+                      no interior do Estado de São Paulo. Teve 18 anos de formação e estudos em seminários, com fase final
+                      sendo frater no seminário São Judas Tadeu em Terra Boa, Paraná. No dia 15 de dezembro de 2001, 
+                      em sua cidade natal, na Igreja Matriz de São Vicente Ferrer, foi ordenado sacerdote pela oração 
+                      consecratória da Igreja e imposição das mãos do Arcebispo Metropolitano de Palmas, Tocantins, 
+                      Dom Alberto Taveira Corrêa. É graduado em Filosofia e Teologia, pós-graduado em Educação 
+                      e mestre em Teologia Sistemática. Como cantor, gravou oito discos pela gravadora católica Paulinas-COMEP, 
+                      um pela gravadora Canção Nova e um projeto independente (Tom de Minas). Seu primeiro disco por uma gravadora secular, 
+                      Vida, foi lançado pela LGK Music e pela Som Livre, com quem lançou mais dois discos (Iluminar e Eu e o tempo - CD e DVD)
+                      até o fim do ano de 2009. Atualmente, teve breve passagem pela gravadora Sony Music e atualmente segue como artista 
+                      independente, tendo lançado singles de grande sucesso em parceria com grandes artistas da música brasileira como 
+                      Quando o sono bater (com Luan Santana, 2020), Não desisto (com Simone e Simaria, 2020) e Retrovisor
+                      (com Ivete Sangalo, 2021). Atualmente está na estrada com o show que leva o título de seu novo single 
+                      distribuído pela Altafonte Este sou Eu (2022). Ao todo, Padre Fábio de Melo já vendeu mais de 3 milhões 
+                      de cópias de CDs (1,8 milhão apenas na Som Livre), além de 3,5 milhões de livros. Como professor universitário, 
+                      lecionou teologia na Faculdade Dehoniana de Taubaté. Apresentou por mais de uma década o programa Direção Espiritual, 
+                      transmitido pela TV Canção Nova, às quintas-feiras. Em dezembro de 2019, entrou no ranking do instituto QualiBest 
+                      como um dos maiores influenciadores digitais do Brasil.
+                    </p>
+                    <p><strong>INGRESSOS NÃO SERÃO DEVOLVIDOS NEM REEMBOLSADOS</strong></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ======= Ticket Modal ======= -->
+      <div class="ticket-modal modal fade" id="ticket-modal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="ticket-modal-label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered d-flex justify-content-center align-items-center">
+          <div class="modal-content">
+            <div class="modal-header d-flex justify-content-center">
+              <div class="container">
+                <div class="row">
+                  <div class="col-12 d-flex justify-content-end">
+                    <div class="modal-close">
+                      <button type="button" class="modal-close" data-bs-dismiss="modal" aria-label="Close"><img src="./assets/img/icons/close.svg" alt=""></button>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="progress">
+                      <div class="steps">
+                        <div class="step-title">
+                          <div class="row">
+                            <div class="col-12 d-flex justify-content-center align-items-center">
+                              <span class="circle active">1</span>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center align-items-center">
+                              <h3>Ingresso</h3>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="step-title">
+                          <div class="row">
+                            <div class="col-12 d-flex justify-content-center align-items-center">
+                              <span class="circle">2</span>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center align-items-center">
+                              <h3>Validação</h3>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="step-title">
+                          <div class="row">
+                            <div class="col-12 d-flex justify-content-center align-items-center">
+                              <span class="circle">3</span>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center align-items-center">
+                              <h3>Pagamento</h3>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="step-title">
+                          <div class="row">
+                            <div class="col-12 d-flex justify-content-center align-items-center">
+                              <span class="circle">4</span>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center align-items-center">
+                              <h3>Confirmação</h3>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="progress-bar">
+                          <span class="indicator"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-body">
+              <div class="step-ticket">
+                <div class="modal-body-container">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-12 d-flex justify-content-center align-items-center">
+                        <div class="modal-tickets-table">
+                          <div class="container">
+                            <div class="row">
+                              <div class="col-12">
+                                <div class="modal-table-grid d-flex justify-content-center">
+                                  <table class="table table-borderless">
+                                    <thead>
+                                      <th><h2>TIPO</h2></th>
+                                      <th class="th-table"><h2>LOTE</h2></th>
+                                      <th class="th-table"><h2>VALOR</h2></th>
+                                      <th><h2>QUANTIDADE</h2></th>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td><span><strong>Online</strong> (promo)</span></td>
+                                        <td class="th-table"><p>1°</p></td>
+                                        <td class="th-table"><p>$ 0,00 + 0,00 tax</p></td>
+                                        <td>
+                                          <div class="spinner-container">
+                                            <button class="spinner-decrement">–</button>
+                                            <input type="number" class="spinner-number" value="0" readonly>
+                                            <button class="spinner-increment">+</button>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td><span><strong>Geral</strong> (promo)</span></td>
+                                        <td class="th-table"><p>1°</p></td>
+                                        <td class="th-table"><p>$ 0,00 + 0,00 tax</p></td>
+                                        <td>
+                                          <div class="spinner-container">
+                                            <button class="spinner-decrement">–</button>
+                                            <input type="number" class="spinner-number" value="0" readonly>
+                                            <button class="spinner-increment">+</button>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td><span><strong>VIP</strong> (promo)</span></td>
+                                        <td class="th-table"><p>1°</p></td>
+                                        <td class="th-table"><p>$ 0,00 + 0,00 tax</p></td>
+                                        <td>
+                                          <div class="spinner-container">
+                                            <button class="spinner-decrement">–</button>
+                                            <input type="number" class="spinner-number" value="0" readonly>
+                                            <button class="spinner-increment">+</button>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                              <div class="col-12">
+                                <div class="coupon">
+                                  <div class="coupon-form d-flex justify-content-center">
+                                    <span>Cupom de desconto:</span>
+                                    <input type="text" class="modal-form-control" placeholder="insira seu cupom de desconto" required>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-12">
+                                <div class="total">
+                                  <span>TOTAL: <strong>$ 0,00 + 0,00 tax</strong></span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 d-flex justify-content-center">
+                        <div class="paymentmap" id="paymentmap">
+                          <div class="accordion">
+                            <div class="accordion-item">
+                              <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-paymentmap" aria-expanded="true" aria-controls="collapse-map">
+                                  <img src="./assets/img/icons/seat.svg" alt="ícone assentos"> Selecione seu assento, setor Prime
+                                </button>
+                              </h2>
+                              <div class="accordion-collapse collapse" id="collapse-paymentmap">
+                                <div class="accordion-body">
+                                  <div class="container">
+                                    <div class="row">
+                                      <div class="col-12 d-flex justify-content-center align-items-center">
+                                        <img src="./assets/img/backgrounds/mapa.svg" alt="mapa de assentos">
+                                      </div>
+                                      <div class="col-12 d-flex justify-content-center align-items-center">
+                                        <a href="" data-bs-toggle="modal" data-bs-target="#seatmap-modal">Clique para aumentar o mapa e selecionar o seu assento</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 d-flex justify-content-center align-items-center">
+                        <div class="delivery">
+                          <span><img src="./assets/img/icons/file.svg" alt="">Escolha a forma de entrega dos ingressos:</span>
+                          <div class="dropdown">
+                            <button class="dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              E-ticket - grátis
+                            </button>
+                            <div class="dropdown-menu">
+                              <a class="dropdown-item" href="#">Correios - $ 0,00</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 d-flex justify-content-center align-items-center">
+                        <div class="step-buttons disabled">
+                          <button type="submit" class="step-btn" id="next" disabled>Validação</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="step-validation d-none">
+                <div class="modal-body-container">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-12 d-flex justify-content-center align-items-center">
+                        <div class="modal-tickets-table">
+                          <div class="container">
+                            <div class="row">
+                              <div class="col-12">
+                                <div class="modal-table-grid d-flex justify-content-center">
+                                  <table class="table table-borderless">
+                                    <thead>
+                                      <th><h2>TIPO</h2></th>
+                                      <th class="th-table"><h2>LOTE</h2></th>
+                                      <th class="th-table"><h2>VALOR</h2></th>
+                                      <th><h2>QUANTIDADE</h2></th>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td><span><strong>Online</strong> (promo)</span></td>
+                                        <td class="th-table"><p>1°</p></td>
+                                        <td class="th-table"><p>$ 0,00 + 0,00 tax</p></td>
+                                        <td>
+                                          <div class="spinner-container">
+                                            <button class="spinner-decrement">–</button>
+                                            <input type="number" class="spinner-number" value="0" readonly>
+                                            <button class="spinner-increment">+</button>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td><span><strong>Geral</strong> (promo)</span></td>
+                                        <td class="th-table"><p>1°</p></td>
+                                        <td class="th-table"><p>$ 0,00 + 0,00 tax</p></td>
+                                        <td>
+                                          <div class="spinner-container">
+                                            <button class="spinner-decrement">–</button>
+                                            <input type="number" class="spinner-number" value="0" readonly>
+                                            <button class="spinner-increment">+</button>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td><span><strong>VIP</strong> (promo)</span></td>
+                                        <td class="th-table"><p>1°</p></td>
+                                        <td class="th-table"><p>$ 0,00 + 0,00 tax</p></td>
+                                        <td>
+                                          <div class="spinner-container">
+                                            <button class="spinner-decrement">–</button>
+                                            <input type="number" class="spinner-number" value="0" readonly>
+                                            <button class="spinner-increment">+</button>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                              <div class="col-12">
+                                <div class="coupon">
+                                  <div class="coupon-form d-flex justify-content-center">
+                                    <span>Cupom de desconto:</span>
+                                    <input type="text" class="modal-form-control" placeholder="insira seu cupom de desconto" required>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-12">
+                                <div class="total">
+                                  <span>TOTAL: <strong>$ 0,00 + 0,00 tax</strong></span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 d-flex justify-content-center align-items-center">
+                        <div class="delivery">
+                          <span><img src="./assets/img/icons/file.svg" alt="">Escolha a forma de entrega dos ingressos:</span>
+                          <div class="dropdown">
+                            <button class="dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              E-ticket - grátis
+                            </button>
+                            <div class="dropdown-menu">
+                              <a class="dropdown-item" href="#">Correios - $ 0,00</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 d-flex justify-content-center align-items-center p-0">
+                        <div class="step-buttons disabled">
+                          <div class="container">
+                            <div class="row">
+                              <div class="col-12">
+                                <h1><strong>Você já está logado como,</strong>  &nbsp; <span class="user-logname">usuário.</span></h1>
+                              </div>
+                              <div class="col-12">
+                                <button type="submit" class="step-btn" id="enter-btn" data-bs-toggle="modal" data-bs-target="#login-modal" disabled>Fazer login com outra conta</button>
+                              </div>
+                              <div class="col-12">
+                                <button type="submit" class="step-btn" id="next" disabled>Pagamento</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="step-payment d-none">
+                <div class="modal-body-container">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-12 d-flex justify-content-center align-items-center">
+                        <div class="modal-tickets-table">
+                          <div class="container">
+                            <div class="row">
+                              <div class="col-12">
+                                <div class="modal-table-grid d-flex justify-content-center">
+                                  <table class="table table-borderless">
+                                    <thead>
+                                      <th><h2>TIPO</h2></th>
+                                      <th class="th-table"><h2>LOTE</h2></th>
+                                      <th class="th-table"><h2>VALOR</h2></th>
+                                      <th><h2>QUANTIDADE</h2></th>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td><span><strong>Online</strong> (promo)</span></td>
+                                        <td class="th-table"><p>1°</p></td>
+                                        <td class="th-table"><p>$ 0,00 + 0,00 tax</p></td>
+                                        <td>
+                                          <div class="spinner-container">
+                                            <button class="spinner-decrement">–</button>
+                                            <input type="number" class="spinner-number" value="0" readonly>
+                                            <button class="spinner-increment">+</button>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td><span><strong>Geral</strong> (promo)</span></td>
+                                        <td class="th-table"><p>1°</p></td>
+                                        <td class="th-table"><p>$ 0,00 + 0,00 tax</p></td>
+                                        <td>
+                                          <div class="spinner-container">
+                                            <button class="spinner-decrement">–</button>
+                                            <input type="number" class="spinner-number" value="0" readonly>
+                                            <button class="spinner-increment">+</button>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td><span><strong>VIP</strong> (promo)</span></td>
+                                        <td class="th-table"><p>1°</p></td>
+                                        <td class="th-table"><p>$ 0,00 + 0,00 tax</p></td>
+                                        <td>
+                                          <div class="spinner-container">
+                                            <button class="spinner-decrement">–</button>
+                                            <input type="number" class="spinner-number" value="0" readonly>
+                                            <button class="spinner-increment">+</button>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                              <div class="col-12">
+                                <div class="coupon">
+                                  <div class="coupon-form d-flex justify-content-center">
+                                    <span>Cupom de desconto:</span>
+                                    <input type="text" class="modal-form-control" placeholder="insira seu cupom de desconto" required>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-12">
+                                <div class="total">
+                                  <span>TOTAL: <strong>$ 0,00 + 0,00 tax</strong></span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 d-flex justify-content-center align-items-center">
+                        <div class="delivery">
+                          <span><img src="./assets/img/icons/file.svg" alt="">Escolha a forma de entrega dos ingressos:</span>
+                          <div class="dropdown">
+                            <button class="dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              E-ticket - grátis
+                            </button>
+                            <div class="dropdown-menu">
+                              <a class="dropdown-item" href="#">Correios - $ 0,00</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-12 d-flex justify-content-center">
+                              <div class="text">
+                                <hr>
+                                <h1><strong>Você já está logado como,</strong>  &nbsp; <span class="user-logname">usuário.</span></h1>
+                                <hr>
+                              </div>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center align-items-center">
+                              <div class="payment-card">
+                                <form class="modal-payment-form">
+                                  <div class="container">
+                                    <div class="row">
+                                      <div class="col-12 p-0">
+                                        <div class="modal-form-group modal-fc-large">
+                                          <span>Número do cartão</span>
+                                          <input type="number" class="modal-form-control" placeholder="1234 5678 9101 1121">
+                                        </div>
+                                      </div>
+                                      <div class="col-12 p-0">
+                                        <div class="modal-form-group modal-fc-large">
+                                          <span>Nome no cartão</span>
+                                          <input type="text" class="modal-form-control" placeholder="Insira o nome igual está escrito no seu cartão">
+                                        </div>
+                                      </div>
+                                      <div class="col-4 d-flex justify-content-start align-items-center p-0">
+                                        <div class="modal-form-group modal-fc-small">
+                                          <span>Data de expiração</span>
+                                          <input type="text" class="modal-form-control" id="expiry-date" placeholder="MM/YY">
+                                        </div>
+                                      </div>
+                                      <div class="col-4 d-flex justify-content-center align-items-center p-0">
+                                        <div class="modal-form-group modal-fc-small">
+                                          <span>CVV</span>
+                                          <input type="number" class="modal-form-control" placeholder="123">
+                                        </div>
+                                      </div>
+                                      <div class="col-4 d-flex justify-content-end align-items-center p-0">
+                                        <div class="modal-form-group modal-fc-small">
+                                          <span>Zip code</span>
+                                          <input type="number" class="modal-form-control" placeholder="12345">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-12 d-flex justify-content-center">
+                                      <div class="modal-payment-text">
+                                        <p>
+                                          Seus dados pessoais serão usados para processar seu pedido, 
+                                          apoiar sua experiência e para os fins descritos
+                                          em nossa política de privacidade.
+                                        </p>
+                                      </div>
+                                    </div>
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center align-items-center">
+                              <div class="step-buttons">
+                                <button type="submit" class="step-btn" id="next">Finalizar compra</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="step-confirmation d-none">
+                <div class="modal-body-container">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-12 d-flex justify-content-center">
+                        <h1>Pedido concluído com SUCESSO!</h1>
+                      </div>
+                      <div class="col-12 d-flex justify-content-center">
+                        <picture class="carousel-image" alt="imagem do evento">
+                          <source media="(max-width: 991px)" srcset="./assets/img/backgrounds/sucesso-small.svg">
+                          <img src="./assets/img/backgrounds/sucesso.svg" alt="">
+                        </picture>
+                      </div>
+                      <div class="col-12 d-flex justify-content-center">
+                        <p>
+                          Você receberá no seu e-mail e no whatsapp cadastrados em 
+                          sua conta o seu e-ticket que deverá ser apresentado na 
+                          entrada do evento para a leitura do QR code. Você pode encontrar 
+                          seus ingressos dentro da sua conta em <a href="./my-tickets.html">meus ingressos</a>.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- End Ticket Modal -->
+    </section>
+  </main>
+  
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="container px-0 d-flex justify-content-center">
+      <div class="row">
+        <div class="col-12 col-lg-4 footer-info d-flex justify-content-center justify-content-xl-end px-lg-1">
+          <div class="container">
+            <div class="row">
+              <div class="col-6 col-md-3 col-lg-12 order-1 px-0 px-lg-2">
+                <a href="index.html" class="footer-logo"><img src="assets/img/logos/logo.svg" alt="Logo Ticket 4-Way" class="img-fluid"></a>
+              </div>
+              <div class="col-17 col-md-6 col-lg-12 d-flex justify-content-start order-3 order-md-2 px-0 px-md-2">
+                <div class="info-tickets4way">
+                  <p>A Tickets4way (Consecutiva USA LLC) é uma empresa de gestão de vendas de ingressos para eventos dos diversos segmentos.</p>
+                </div>
+              </div>
+              <div class="col-6 col-md-3 col-lg-12 order-2 order-md-3 d-flex justify-content-end justify-content-lg-start px-md-2">
+                <div class="social-media">
+                  <a href="https://www.facebook.com/"><img src="/assets/img/logos/facebook.svg" alt="facebook" class="social-link"></a>
+                  <a href="https://twitter.com/"><img src="/assets/img/logos/twitter.svg" alt="twitter" class="social-link"></a>
+                  <a href="https://www.linkedin.com/"><img src="/assets/img/logos/linkeIn.svg" alt="linkedin" class="social-link"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2 footer-links d-flex justify-content-start justify-content-lg-end px-md-3 py-0 m-0">
+          <div class="business-details">
+            <h4>Ticket4Way</h4>
+            <ul>
+              <li><a href="about-us.html">Sobre nós</a></li>
+              <li><a href="your-event-here.html">Seu evento aqui</a></li>
+              <li><a href="security-and-privacy.html">Segurança e privacidade</a></li>
+              <li><a href="policies-and-procedures.html">Politicas e procedimentos</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2 footer-links d-flex justify-content-end justify-content-xl-center px-2 py-0 m-0">
+          <div class="business-questions">
+            <h4>Dúvidas</h4>
+            <ul>
+              <li><a href="questions.html">Perguntas frequentes</a></li>
+              <li><a href="how-to-buy.html">Como comprar?</a></li>
+              <li><a href="outlets.html">Pontos de venda</a></li>
+              <li><a href="cancellations.html">Cancelamentos</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 footer-links d-flex justify-content-start justify-content-md-end justify-content-xl-center px-0 px-xl-2 py-0 my-0 ps-3 ps-md-0">
+          <div class="footer-newsletter">
+            <h4>Fique por dentro</h4>
+            <p>Junte-se à nossa lista de e-mails para ficar por dentro das novidades para eventos e shows.</p>
+            <form action="" method="post" class="newsletter">
+              <input type="email" name="email" placeholder="Insira seu e-mail" required><input type="submit" value="Inscreva-se agora">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <!-- Preloader & Back to Top -->
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a><!-- End Preloader & Back to Top -->
+
+  <!-- Bootstrap JS Files -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Ticket4Way JS File -->
+  <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+[
+  {
+    "event_id": "0",
+    "title": "MELIM",
+    "location": "LEGENDS RESTO & LOUNGE",
+    "address": "5250 International Dr., Orlando/FL",
+    "banner": "MELIM",
+    "card_month": "OUT",
+    "card_day": "06"
+  },
+  {
+    "event_id": "1",
+    "title": "RANCHO MINHA TERRA INAUGURAÇÃO",
+    "location": "ORLANDO",
+    "address": "18580 First Street, Orlando/FL",
+    "banner": "RANCHO MINHA TERRA INAUGURAÇÃO",
+    "card_month": "OUT",
+    "card_day": "14"
+  },
+  {
+    "event_id": "2",
+    "title": "TURMA DO PAGODE",
+    "location": "ORLANDO INDOOR SOCCER",
+    "address": "11435 Rocket Blvd 104, Orlando/FL",
+    "banner": "TURMA DO PAGODE",
+    "card_month": "OUT",
+    "card_day": "29"
+  },
+  {
+    "event_id": "3",
+    "title": "HALLOWEEN BASH PARTY",
+    "location": "PIQUET RACE PARK",
+    "address": "16169 Southern Blvd, Loxahatchee/FL",
+    "banner": "HALLOWEEN BASH",
+    "card_month": "OUT",
+    "card_day": "29"
+  },
+  {
+    "event_id": "4",
+    "title": "PRÓXIMO NÍVEL O PODER DIGITAL PARA EMPRESAS",
+    "location": "ORLANDO",
+    "address": "9755 Delegate Dr, Orlando/FL",
+    "banner": "PRÓXIMO NÍVEL O PODER DIGITAL PARA EMPRESAS",
+    "card_month": "OUT",
+    "card_day": "29"
+  }
+]

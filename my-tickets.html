@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Tickets 4-Way</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/logos/favicon.svg" rel="icon">
+
+  <!-- Fonts -->
+  <link href="assets/fonts/DMSans-Bold.ttf" rel="stylesheet">
+  <link href="assets/fonts/DMSans-Medium.ttf" rel="stylesheet">
+  <link href="assets/fonts/DMSans-Regular.ttf" rel="stylesheet">
+
+  <!-- Bootstrap CSS Files -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Ticket4Way CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container nav-container navbar-expand-sm d-flex align-items-center justify-content-end">
+      <div class="language">
+        <button class="language-btn"><img src="/assets/img/logos/pt-br.svg" alt="português" class="language-img active"></button>
+        <button class="language-btn"><img src="/assets/img/logos/us.svg" alt="inglês" class="language-img"></button>
+        <button class="language-btn"><img src="/assets/img/logos/es.svg" alt="espanhol" class="language-img"></button>
+      </div>
+    </div>
+
+    <!-- ======= Navbar ======= -->
+    <div class="container nav-container navbar-expand-sm d-flex align-items-center">
+      <a href="index.html" class="header-logo me-auto"><img src="assets/img/logos/logo.svg" alt="Logo Ticket 4-Way"></a>
+      <i class="bi bi-list mobile-nav-toggle order-2"></i>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="index.html">Inicio</a></li>
+          <li><a class="nav-link scrollto" href="about-us.html">Sobre nós</a></li>
+          <li><a class="nav-link scrollto" href="index.html#events">Eventos</a></li>
+          <li><a class="nav-link scrollto" href="your-event-here.html">Seu evento aqui</a></li>
+          <li><a class="nav-link scrollto" href="index.html#contact">Contato</a></li>
+        </ul> 
+      </nav>
+      <div class="log-btn">
+        <div class="navbtn-user order-1 active" id="navbtn-user">
+          <div class="user-accordion position-fixed" id="user-accordion">
+            <div class="user-accordion-item">
+              <h2 class="user-accordion-header">
+                <button class="user-accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-user" aria-expanded="true" aria-controls="collapse-user">
+                  Olá, usuário
+                </button>
+              </h2>
+              <div id="collapse-user" class="accordion-collapse collapse">
+                <div class="user-accordion-body">
+                  <a class="user-accordion-link" href="my-tickets.html"><img src="./assets/img/icons/ticket.svg" alt="Ticket">Meus ingressos</a>
+                  <a class="user-accordion-link" href="my-account.html"><img src="./assets/img/icons/user.svg" alt="User">Minha conta</a>
+                  <a class="user-accordion-link" href="index.html"><img src="./assets/img/icons/logout.svg" alt="Logout">Sair</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- End Navbar -->
+  </header><!-- End Header -->
+  
+  <!-- ======= Hero ======= -->
+  <section id="institutional-hero">
+  </section><!-- End Hero -->
+  
+  <!-- ======= Main ======= -->
+  <main id="main">
+    <section id="mytickets">
+      <div class="container px-xl-5">
+        <div class="row px-xl-5">
+          <div class="col-12 d-flex justify-content-center align-items-center">
+            <div class="mytickets-title">
+              <h1>Meus Ingressos</h1>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-lg-6 order-2 order-lg-1 d-flex justify-content-center justify-content-lg-start align-items-center">
+                <div class="search-event-bar">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-4 col-md-5 d-flex justify-content-center align-items-center p-0">
+                        <span>Buscar eventos</span>
+                      </div>
+                      <div class="col-8 col-md-7 d-flex justify-content-start align-items-center p-0">
+                        <input class="search-event-input" type="text" placeholder="Insira o nome do evento" />
+                        <div class="search-button">
+                          <button type="button" class="search-event-btn" onclick="clickIrParaMeusEventos('','S');">
+                            <img src="assets/img/icons/search.svg" alt="">
+                          </button> 
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6 order-1 order-lg-2 d-flex justify-content-center justify-content-lg-end align-items-end">
+                <div class="mytickets-status d-flex justify-content-center justify-content-lg-end align-items-center">
+                  <button type="button" class="btn button-active btn-activate">Ativos</button>
+                  <span>|</span>
+                  <button type="button" class="btn button-closed">Encerrados</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <!-- ======= User Active Cards ======= -->
+            <div class="active-cards show-status">
+              <div class="user-cards">
+                <div class="container px-0">
+                  <div class="row">
+                    <div class="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-start">
+                      <div class="user-card">
+                        <div class="usercard-image">
+                          <img src="assets/img/cards/MELIM.png">
+                        </div>
+                        <div class="usercard-content">
+                          <div class="container">
+                            <div class="row">
+                              <div class="col-12">
+                                <div class="usercard-title">
+                                  <p class="usercard-event">MELIM</p>
+                                </div>
+                              </div>
+                              <div class="container">
+                                <div class="row ms-2">
+                                  <div class="col-2 px-0">
+                                    <div class="usercard-date">
+                                      <p class="usercard-month">OUT</p>
+                                      <p class="usercard-day">06</p>
+                                    </div>
+                                  </div>
+                                  <div class="col-10 px-0">
+                                    <div class="usercard-info">
+                                      <p class="usercard-location">LEGENDS RESTO & LOUNGE</p>
+                                      <p class="usercard-address">5250 International Dr., Orlando, FL</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="container">
+                                <div class="col-12">
+                                  <div class="details-btn">
+                                    <a href="#">Detalhes da compra +</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-start">
+                      <div class="user-card">
+                        <div class="usercard-image">
+                          <img src="assets/img/cards/MELIM.png">
+                        </div>
+                        <div class="usercard-content">
+                          <div class="container">
+                            <div class="row">
+                              <div class="col-12">
+                                <div class="usercard-title">
+                                  <p class="usercard-event">MELIM</p>
+                                </div>
+                              </div>
+                              <div class="container">
+                                <div class="row ms-2">
+                                  <div class="col-2 px-0">
+                                    <div class="usercard-date">
+                                      <p class="usercard-month">OUT</p>
+                                      <p class="usercard-day">06</p>
+                                    </div>
+                                  </div>
+                                  <div class="col-10 px-0">
+                                    <div class="usercard-info">
+                                      <p class="usercard-location">LEGENDS RESTO & LOUNGE</p>
+                                      <p class="usercard-address">5250 International Dr., Orlando, FL</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="container">
+                                <div class="col-12">
+                                  <div class="details-btn">
+                                    <a href="#">Detalhes da compra +</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-start">
+                      <div class="user-card">
+                        <div class="usercard-image">
+                          <img src="assets/img/cards/MELIM.png">
+                        </div>
+                        <div class="usercard-content">
+                          <div class="container">
+                            <div class="row">
+                              <div class="col-12">
+                                <div class="usercard-title">
+                                  <p class="usercard-event">MELIM</p>
+                                </div>
+                              </div>
+                              <div class="container">
+                                <div class="row ms-2">
+                                  <div class="col-2 px-0">
+                                    <div class="usercard-date">
+                                      <p class="usercard-month">OUT</p>
+                                      <p class="usercard-day">06</p>
+                                    </div>
+                                  </div>
+                                  <div class="col-10 px-0">
+                                    <div class="usercard-info">
+                                      <p class="usercard-location">LEGENDS RESTO & LOUNGE</p>
+                                      <p class="usercard-address">5250 International Dr., Orlando, FL</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="container">
+                                <div class="col-12">
+                                  <div class="details-btn">
+                                    <a href="#">Detalhes da compra +</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-start">
+                      <div class="user-card">
+                        <div class="usercard-image">
+                          <img src="assets/img/cards/MELIM.png">
+                        </div>
+                        <div class="usercard-content">
+                          <div class="container">
+                            <div class="row">
+                              <div class="col-12">
+                                <div class="usercard-title">
+                                  <p class="usercard-event">MELIM</p>
+                                </div>
+                              </div>
+                              <div class="container">
+                                <div class="row ms-2">
+                                  <div class="col-2 px-0">
+                                    <div class="usercard-date">
+                                      <p class="usercard-month">OUT</p>
+                                      <p class="usercard-day">06</p>
+                                    </div>
+                                  </div>
+                                  <div class="col-10 px-0">
+                                    <div class="usercard-info">
+                                      <p class="usercard-location">LEGENDS RESTO & LOUNGE</p>
+                                      <p class="usercard-address">5250 International Dr., Orlando, FL</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="container">
+                                <div class="col-12">
+                                  <div class="details-btn">
+                                    <a href="#">Detalhes da compra +</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-start">
+                      <div class="user-card">
+                        <div class="usercard-image">
+                          <img src="assets/img/cards/MELIM.png">
+                        </div>
+                        <div class="usercard-content">
+                          <div class="container">
+                            <div class="row">
+                              <div class="col-12">
+                                <div class="usercard-title">
+                                  <p class="usercard-event">MELIM</p>
+                                </div>
+                              </div>
+                              <div class="container">
+                                <div class="row ms-2">
+                                  <div class="col-2 px-0">
+                                    <div class="usercard-date">
+                                      <p class="usercard-month">OUT</p>
+                                      <p class="usercard-day">06</p>
+                                    </div>
+                                  </div>
+                                  <div class="col-10 px-0">
+                                    <div class="usercard-info">
+                                      <p class="usercard-location">LEGENDS RESTO & LOUNGE</p>
+                                      <p class="usercard-address">5250 International Dr., Orlando, FL</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="container">
+                                <div class="col-12">
+                                  <div class="details-btn">
+                                    <a href="#">Detalhes da compra +</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-start">
+                      <div class="user-card">
+                        <div class="usercard-image">
+                          <img src="assets/img/cards/MELIM.png">
+                        </div>
+                        <div class="usercard-content">
+                          <div class="container">
+                            <div class="row">
+                              <div class="col-12">
+                                <div class="usercard-title">
+                                  <p class="usercard-event">MELIM</p>
+                                </div>
+                              </div>
+                              <div class="container">
+                                <div class="row ms-2">
+                                  <div class="col-2 px-0">
+                                    <div class="usercard-date">
+                                      <p class="usercard-month">OUT</p>
+                                      <p class="usercard-day">06</p>
+                                    </div>
+                                  </div>
+                                  <div class="col-10 px-0">
+                                    <div class="usercard-info">
+                                      <p class="usercard-location">LEGENDS RESTO & LOUNGE</p>
+                                      <p class="usercard-address">5250 International Dr., Orlando, FL</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="container">
+                                <div class="col-12">
+                                  <div class="details-btn">
+                                    <a href="#">Detalhes da compra +</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- User Active Cards -->
+          </div>
+          <div class="col-12 d-flex justify-content-center align-items-center">
+            <!-- ======= User Closed Cards ======= -->
+            <div class="closed-cards">
+              <div class="mytickets-text d-flex justify-content-center align-items-center">
+                <p>
+                  Nenhum evento encontrado.             
+                </p>
+              </div>
+            </div><!-- User Closed Cards -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main><!-- End Main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="container px-0 d-flex justify-content-center">
+      <div class="row">
+        <div class="col-12 col-lg-4 footer-info d-flex justify-content-center justify-content-xl-end px-lg-1">
+          <div class="container">
+            <div class="row">
+              <div class="col-6 col-md-3 col-lg-12 order-1 px-0 px-lg-2">
+                <a href="index.html" class="footer-logo"><img src="assets/img/logos/logo.svg" alt="Logo Ticket 4-Way" class="img-fluid"></a>
+              </div>
+              <div class="col-17 col-md-6 col-lg-12 d-flex justify-content-start order-3 order-md-2 px-0 px-md-2">
+                <div class="info-tickets4way">
+                  <p>A Tickets4way (Consecutiva USA LLC) é uma empresa de gestão de vendas de ingressos para eventos dos diversos segmentos.</p>
+                </div>
+              </div>
+              <div class="col-6 col-md-3 col-lg-12 order-2 order-md-3 d-flex justify-content-end justify-content-lg-start px-md-2">
+                <div class="social-media">
+                  <a href="https://www.facebook.com/"><img src="/assets/img/logos/facebook.svg" alt="facebook" class="social-link"></a>
+                  <a href="https://twitter.com/"><img src="/assets/img/logos/twitter.svg" alt="twitter" class="social-link"></a>
+                  <a href="https://www.linkedin.com/"><img src="/assets/img/logos/linkeIn.svg" alt="linkedin" class="social-link"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2 footer-links d-flex justify-content-start justify-content-lg-end px-md-3 py-0 m-0">
+          <div class="business-details">
+            <h4>Ticket4Way</h4>
+            <ul>
+              <li><a href="about-us.html">Sobre nós</a></li>
+              <li><a href="your-event-here.html">Seu evento aqui</a></li>
+              <li><a href="security-and-privacy.html">Segurança e privacidade</a></li>
+              <li><a href="policies-and-procedures.html">Politicas e procedimentos</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2 footer-links d-flex justify-content-end justify-content-xl-center px-2 py-0 m-0">
+          <div class="business-questions">
+            <h4>Dúvidas</h4>
+            <ul>
+              <li><a href="questions.html">Perguntas frequentes</a></li>
+              <li><a href="how-to-buy.html">Como comprar?</a></li>
+              <li><a href="outlets.html">Pontos de venda</a></li>
+              <li><a href="cancellations.html">Cancelamentos</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 footer-links d-flex justify-content-start justify-content-md-end justify-content-xl-center px-0 px-xl-2 py-0 my-0 ps-3 ps-md-0">
+          <div class="footer-newsletter">
+            <h4>Fique por dentro</h4>
+            <p>Junte-se à nossa lista de e-mails para ficar por dentro das novidades para eventos e shows.</p>
+            <form action="" method="post" class="newsletter">
+              <input type="email" name="email" placeholder="Insira seu e-mail" required><input type="submit" value="Inscreva-se agora">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <!-- Preloader & Back to Top -->
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a><!-- End Preloader & Back to Top -->
+
+  <!-- Bootstrap JS Files -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Ticket4Way JS File -->
+  <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

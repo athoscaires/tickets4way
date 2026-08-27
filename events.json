@@ -1,0 +1,57 @@
+[
+  {
+    "event_id": "0",
+    "event_banner": "MELIM",
+    "event_title": "MELIM",
+    "event_day": "06",
+    "event_month": "DE OUTUBRO",
+    "event_location": "LEGENDS RESTO & LOUNGE",
+    "event_address": "5250 International Dr., Orlando/FL",
+    "event_start": "Inicio: 9pm",
+    "event_open": "Abertura dos portões: 8pm"
+  },
+  {
+    "event_id": "1",
+    "event_banner": "RANCHO MINHA TERRA INAUGURAÇÃO",
+    "event_title": "RANCHO MINHA TERRA INAUGURAÇÃO",
+    "event_day": "14 à 16",
+    "event_month": "DE OUTUBRO",
+    "event_location": "ORLANDO",
+    "event_address": "18580 First Street, Orlando/FL",
+    "event_start": "Inicio: 9am",
+    "event_open": "Abertura dos portões: 8am"
+  },
+  {
+    "event_id": "2",
+    "event_banner": "TURMA DO PAGODE",
+    "event_title": "TURMA DO PAGODE",
+    "event_day": "29",
+    "event_month": "DE OUTUBRO",
+    "event_location": "ORLANDO INDOOR SOCCER",
+    "event_address": "11435 Rocket Blvd 104, Orlando/FL",
+    "event_start": "Inicio: 6pm",
+    "event_open": "Abertura dos portões: 5apm"
+  },
+  {
+    "event_id": "3",
+    "event_banner": "HALLOWEEN BASH",
+    "event_title": "HALLOWEEN BASH PARTY",
+    "event_day": "29",
+    "event_month": "DE OUTUBRO",
+    "event_location": "PIQUET RACE PARK",
+    "event_address": "16169 Southern Blvd, Loxahatchee/FL",
+    "event_start": "Inicio: 9pm",
+    "event_open": "Abertura dos portões: 8apm"
+  },
+  {
+    "event_id": "4",
+    "event_banner": "PRÓXIMO NÍVEL O PODER DIGITAL PARA EMPRESAS",
+    "event_title": "PRÓXIMO NÍVEL O PODER DIGITAL PARA EMPRESAS",
+    "event_day": "29",
+    "event_month": "DE OUTUBRO",
+    "event_location": "ORLANDO",
+    "event_address": "9755 Delegate Dr, Orlando/FL",
+    "event_start": "Inicio: 9am",
+    "event_open": "Abertura dos portões: 8am"
+  }
+]
